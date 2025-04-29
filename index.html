@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Comment system</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="scripts/User.js" defer></script>
+    <script src="scripts/Message.js" defer></script>
+</head>
+<body class="body">
+<header class="header"></header>
+<div class="main-container">
+    <aside id="mainNav" class="navbar"></aside>
+    <section class="articles">
+        <div class="wrapper">
+            <article class="article-container">
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+                <div class="article-container__text"></div>
+            </article>
+            <article class="article-bottom">
+            </article>
+            <article class="article-bottom-comments">
+                <div class="article-bottom-comments__separator"></div>
+                <div class="article-bottom-comments__container">
+                    <ul class="navigation-container">
+                        <li class="navigation-container__comments">Комментарии
+                            <div id="commentsNumber" class="navigation-container__comments-number">(0)</div>
+                        </li>
+                        <li class="navigation-container__marks">
+                            <span id="sortValue">По количеству оценок</span>
+                            <div class="navigation-container__menu">
+                                <div class="navigation-container-menu__dropdown-container">
+                                    <div class="dropdown-container-checkbox">
+                                        <input class="dropdown-container-checkbox__input" type="radio" id="option1"
+                                               name="menu"
+                                               value="Option 1">
+                                        <label class="dropdown-container-checkbox__item" for="option1">✔</label>
+                                        <input class="dropdown-container-checkbox__input" type="radio" id="option2"
+                                               name="menu"
+                                               value="Option 2" checked>
+                                        <label class="dropdown-container-checkbox__input_active dropdown-container-checkbox__item"
+                                               for="option2">✔</label>
+                                        <input class="dropdown-container-checkbox__input" type="radio" id="option3"
+                                               name="menu"
+                                               value="Option 3">
+                                        <label class="dropdown-container-checkbox__item" for="option3">✔</label>
+                                    </div>
+                                    <div class="dropdown-container-labels">
+                                        <label id="byDate" class="dropdown-container-labels__item" for="option1">По
+                                            дате</label>
+                                        <label id="byMarks" class="dropdown-container-labels__item" for="option2">По
+                                            количеству
+                                            оценок</label>
+                                        <label id="byAnswers" class="dropdown-container-labels__item" for="option3">По
+                                            количеству
+                                            ответов</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navigation-container__arrow">&#11206;</li>
+                        <li id="favButton" class="navigation-container__marks">Избранное</li>
+                        <li class="navigation-container__heart">
+                            <img src="./assets/heart.svg" alt="heart"></li>
+                    </ul>
+                    <div id="autoTextBox" class="message-box">
+                        <div class="message-box__avatar">
+                            <img id="messageSendAvatar" src="" alt="avatar"
+                                 class="message-box__avatar_circle">
+                        </div>
+                        <div class="message-box__heading">
+                            <p id="messageSendName" class="message-box__heading-name"></p>
+                            <p id="messageSize" class="message-box__heading-text-size">Макс. 1000
+                                символов</p>
+                            <div class="input-container">
+                                <label>
+                                <textarea id="autoTextArea"
+                                          class="message-box__heading-text-area"
+                                          placeholder="Введите текст сообщения..."></textarea>
+                                </label>
+                                <div class="button-container">
+                                    <p id="errorMessage" class="error-message">Слишком длинное сообщение</p>
+                                    <button id="sendButton" class="send-button">Отправить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+</body>
+</html>
