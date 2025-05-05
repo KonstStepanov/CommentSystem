@@ -8,7 +8,7 @@ class User {
     }
 }
 
-class UserService {
+export class UserService {
     private readonly url: string = "https://randomuser.me/api/?results=20";
     private users: User[] = [
         {name: "Lilja Suomi", avatar: "./assets/avatars/68.jpg"},
@@ -64,9 +64,6 @@ function updateRandomUser(): void {
 }
 
 window.addEventListener("load", async () => {
-    // Use predefined users initially
     updateRandomUser();
-
-    // Start API call asynchronously
     await userService.fetchUsersFromAPI();
 });
